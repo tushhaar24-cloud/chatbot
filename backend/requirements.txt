@@ -11,5 +11,10 @@ pydantic-settings==2.7.0
 sqlalchemy==2.0.36
 psycopg[binary]==3.2.3
 
+# --- Authentication ---
+bcrypt==4.2.1
+pyjwt==2.10.1
+email-validator==2.2.0
+
 # --- AI provider (HTTP client for the LLM API) ---
 httpx==0.28.1

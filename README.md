@@ -9,8 +9,8 @@ React + TypeScript frontend, FastAPI backend, PostgreSQL, one LLM provider.
 |---|---|
 | 1 — Project setup | done |
 | 2 — Database (users, conversations, messages) | done |
-| 3 — Authentication | next |
-| 4 — Conversation APIs | |
+| 3 — Authentication | done |
+| 4 — Conversation APIs | next |
 | 5 — Chat without AI (mock response) | |
 | 6 — Integrate LLM | |
 

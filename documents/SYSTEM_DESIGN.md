@@ -343,8 +343,8 @@ frontend/.env         public   VITE_API_BASE_URL only              gitignored
 |---|---|---|
 | 1 Setup | process wiring, config, `api.ts`, CORS | done |
 | 2 Database | models + schema management | done |
-| 3 Auth | `core/security`, `schemas/auth`, `repositories/user`, `services/auth`, `routes/auth`, `get_current_user` | next |
-| 4 Conversation APIs | conversation repository + service + routes | |
+| 3 Auth | `core/security`, `schemas/auth`, `repositories/user`, `services/auth`, `routes/auth`, `get_current_user` | done |
+| 4 Conversation APIs | conversation repository + service + routes | next |
 | 5 Chat without AI | message repository, `chat_service` with a **mock** reply | |
 | 6 LLM | `ai_service` replaces the mock — one file changes | |
 | 7 Context | history window inside `chat_service` | |

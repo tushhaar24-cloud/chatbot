@@ -33,6 +33,13 @@ class Settings(BaseSettings):
     # --- CORS ---
     CORS_ORIGINS: str = "http://localhost:5173"
 
+    # --- Authentication ---
+    # No default: the app must refuse to start rather than sign tokens with a
+    # predictable key. A leaked JWT_SECRET_KEY lets anyone impersonate anyone.
+    JWT_SECRET_KEY: str
+    JWT_ALGORITHM: str = "HS256"
+    JWT_EXPIRE_MINUTES: int = 1440  # 24 hours
+
     # --- AI / LLM provider (unused until Milestone 6) ---
     # Every one of these is read from .env so the provider and model can be
     # swapped without touching code (BRD section 21). AI_API_KEY stays on the
@@ -40,7 +47,7 @@ class Settings(BaseSettings):
     AI_PROVIDER: str = "groq"
     AI_BASE_URL: str = "https://api.groq.com/openai/v1"
     AI_API_KEY: str = ""
-    AI_MODEL: str = "llama-3.3-70b-versatile"
+    AI_MODEL: str = "openai/gpt-oss-120b"
     AI_TEMPERATURE: float = 0.7
     AI_MAX_TOKENS: int = 1024
     AI_TIMEOUT_SECONDS: float = 30.0
